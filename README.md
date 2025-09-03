@@ -29,7 +29,7 @@ You can download it in one of three ways. Pick the one you are most comfortable 
 
 ### 3. Set Up Python Environment
 
-It is highly recommended to use a virtual environment.
+It is highly recommended to use a virtual environment. Then, you can install the inference engine.
 
 ```bash
 python3 -m venv llama
@@ -39,8 +39,7 @@ source llama/bin/activate
 # Windows:
 source llama/Scripts/activate
 
-# 3. Install the required library
-pip install llama-cpp-python flask
+pip install llama-cpp-python
 ```
 
 ### 4. Usage: Generate a "Hello, World!" Script
@@ -54,6 +53,11 @@ python3 main.py "create a simple python script that prints hello world" -o hello
 This will generate a file named hello.py. You can inspect it with cat hello.py and run it with python hello.py.
 
 ### 5. Example: Generate a Flask Web Server
+First, we need to add flask to our environment:
+
+```bash
+pip install flask
+```
 
 ```bash
 python3 main.py "Create a simple web server using Flask that has one route '/' which returns a JSON object {'status': 'ok'}. The server should run on port 8080." -o app.py
